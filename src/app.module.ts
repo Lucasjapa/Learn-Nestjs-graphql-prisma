@@ -2,6 +2,7 @@ import {Module} from "@nestjs/common";
 import {GraphQLModule} from "@nestjs/graphql";
 import {ApolloDriver, ApolloDriverConfig} from "@nestjs/apollo";
 import {UserResolver} from "./graphql/resolver/user.resolver";
+import { StudentRestModule } from './modules/student-rest/student-rest.module';
 
 
 @Module({
@@ -10,6 +11,7 @@ import {UserResolver} from "./graphql/resolver/user.resolver";
             driver: ApolloDriver,
             autoSchemaFile: true,
         }),
+        StudentRestModule,
     ],
     controllers: [],
     providers: [
