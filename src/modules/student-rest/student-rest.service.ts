@@ -29,7 +29,7 @@ export class StudentRestService {
     }
 
     async findAll(){
-        return (await this.prisma.student.findMany()).sort();
+        return (await this.prisma.student.findMany()).sort( );
     }
 
     async updateStudent(id: string, data: StudentDTO){
