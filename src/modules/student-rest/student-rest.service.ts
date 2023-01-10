@@ -11,21 +11,21 @@ export class StudentRestService {
 
     async create(data: StudentDTO){
 
-        const studentExists = await this.prisma.student.findFirst({
-            where:{
-                name: data.name,
-            },
-        });
+        // const studentExists = await this.prisma.student.findFirst({
+        //     where:{
+        //         name: data.name,
+        //     },
+        // });
 
-        if(studentExists){
-            throw new Error('Student already exists');
-        }
+        // if(studentExists){
+        //     throw new Error('Student already exists');
+        // }
 
-        const student = await this.prisma.student.create({
-            data,
-        });
+        // const student = await this.prisma.student.create({
+        //     data,
+        // });
 
-        return student;
+        // return student;
     }
 
     async findAll(){
